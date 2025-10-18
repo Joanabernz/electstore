@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Register</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card: #141a32;
+      --surface: #1e254a;
+      --text: #fff;
+      --accent: #6ea8fe;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+      background: radial-gradient(circle at 20% -10%, #2a2f6b 0%, #0b1020 40%), var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+    .card {
+      width: 100%;
+      max-width: 420px;
+      background: linear-gradient(135deg, rgba(30,40,90,.95), rgba(20,26,60,.95));
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,.25);
+    }
+    h1 { font-size: 1.25rem; margin: 0 0 12px; }
+    label { display: block; font-size: .9rem; margin-top: 12px; }
+    input {
+      width: 100%;
+      padding: 12px 12px;
+      border-radius: 8px;
+      border: 1px solid #334;
+      margin-top: 6px;
+      background: rgba(255,255,255,.08);
+      color: #fff;
+    }
+    button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 10px;
+      border-radius: 4px;
+      border: none;
+      background: var(--accent);
+      color: #09122a;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .hint { font-size: .8rem; color: #cbd5e1; margin-top: 8px; text-align: center; }
+    .error { color: #ff9aaa; font-size: .9rem; margin-top: 6px; }
+  </style>
+</head>
+<body>
+  <main class="card" aria-label="Registration form">
+    <h1>Create your account</h1>
+    <form action="CreateRegister.php" method="POST" >
+
+      <label for="Firstname">Firstname</label>
+      <input type="text" id="Firstname" name="Firstname"  value="Firstname" placeholder="Firstname" required minlength="3" />
+
+
+
+      <label for="Lastname">Lastname</label>
+      <input type="text " id="Lastname" name="Lastname" value="Lastname" placeholder="Lastname" required minlength="3" />
+
+    <label for="City">City</label>
+      <input type="text " id="City" name="City" value="City" placeholder="City" minlength="3" />
+
+      <label for="username">Username</label>
+      <input type="text " id="username" name="username" value="username" placeholder="username" required minlength="3" />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required minlength="6" />
+
+      <button type="submit">Submit</button>
+      <div class="error" id="error" aria-live="polite"></div>
+      <div class="hint">By registering you agree to our terms.</div>
+    </form>
+
+    
+  </main>
+
+
+</body>
+</html>

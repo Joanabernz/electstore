@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Order List</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card: #141a32;
+      --surface: #1e254a;
+      --text: #fff;
+      --accent: #6ea8fe;
+    }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+      background: radial-gradient(circle at 20% -10%, #2a2f6b 0%, #0b1020 40%), var(--bg);
+      color: var(--text);
+      padding: 16px;
+    }
+    .container {
+      max-width: 420px;
+      margin: auto;
+      background: linear-gradient(135deg, rgba(30,40,90,.95), rgba(20,26,60,.95));
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0,0,0,.25);
+      overflow: hidden;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--surface);
+      padding: 16px 20px;
+      border-bottom: 1px solid #334;
+    }
+    .header h2 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: var(--accent);
+    }
+    .edit-btn {
+      background-color: var(--accent);
+      color: #09122a;
+      padding: 3px 5px;
+      border-radius: 3px;
+      font-weight:bold;
+      font-size: 10px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .edit-btn:hover {
+      background-color: #8bb9ff;
+    }
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      background-color: #1a1f3c;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>Orders</h2>
+      <a href="UpdateQuantity.html" class="edit-btn" target="_blank">Update Quantity</a>
+      
+       <a href="OrderCreate.html" class="edit-btn">Order Again</a>
+<br><br>
+   <a href="index.html" class="edit-btn">Logout</a>
+    </div>
+    <iframe src="OrderList.php" title="Order List"></iframe>
+
+        
+      
+  </div>
+</body>
+</html>

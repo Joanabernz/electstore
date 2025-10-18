@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Update Quantity</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card: #141a32;
+      --surface: #1e254a;
+      --text: #fff;
+      --accent: #6ea8fe;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+      background: radial-gradient(circle at 20% -10%, #2a2f6b 0%, #0b1020 40%), var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+    .card {
+      width: 100%;
+      max-width: 420px;
+      background: linear-gradient(135deg, rgba(30,40,90,.95), rgba(20,26,60,.95));
+      border-radius: 16px;
+      padding: 15px;
+      box-shadow: 0 20px 40px rgba(0,0,0,.25);
+    }
+    h2 {
+      font-size: 1.4rem;
+      margin-bottom: 16px;
+      text-align: center;
+      color: var(--accent);
+    }
+    label {
+      display: block;
+      font-size: .9rem;
+      margin-top: 12px;
+    }
+    input {
+      width: 100%;
+      padding: 6px;
+      border-radius: 4px;
+      border: 1px solid #334;
+      margin-top: 6px;
+      background: rgba(255,255,255,.08);
+      color: #fff;
+    }
+    input[type="submit"] {
+      width: 100%;
+      padding: 6px;
+      margin-top: 20px;
+      border-radius: 8px;
+      border: none;
+      background: var(--accent);
+      color: #09122a;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+     .edit-btn {
+      background-color: var(--accent);
+      color: #09122a;
+      padding: 3px 5px;
+      border-radius: 3px;
+      font-weight:bold;
+      font-size: 10px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    input[type="submit"]:hover {
+      background: #8bb9ff;
+    }
+  </style>
+</head>
+<body>
+  <main class="card" aria-label="Update Quantity Form">
+    <h2>Update Quantity</h2>
+    <form action="UpdateOrder.php" method="POST">
+      <label for="OrderID">Order ID:</label>
+      <input type="number" name="OrderID" id="OrderID" placeholder="Enter Order ID" required />
+
+      <label for="Quantity">New Quantity:</label>
+      <input type="number" name="Quantity" id="Quantity" placeholder="Enter New Quantity" required />
+
+      <input type="submit" value="Update Quantity" />
+
+      <br><br>
+       <a href="OrderCreate.html" class="edit-btn">Order Again</a>
+    </form>
+  </main>
+</body>
+</html>
