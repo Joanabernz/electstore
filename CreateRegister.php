@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "electstore");
+$conn = new mysqli ('yamanote.proxy.rlwy.net', 'root', 'jUpvuIHgXOAUuquWOoJVXMpYQmGiOkyU', 'electstore');
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -24,4 +24,5 @@ $sql = "INSERT INTO customers (Firstname, Lastname, City, username, password)
 
     $conn->close();
 }
+
 ?>
