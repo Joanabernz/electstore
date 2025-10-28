@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "electstore");
+$conn = new mysqli ('yamanote.proxy.rlwy.net', 'root', 'jUpvuIHgXOAUuquWOoJVXMpYQmGiOkyU', 'electstore');
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
@@ -20,4 +20,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 $conn->close();
+
 ?>
